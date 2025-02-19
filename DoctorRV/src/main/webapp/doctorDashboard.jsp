@@ -34,7 +34,7 @@
                         <td class="py-2 px-4 border">2025-02-20</td>
                         <td class="py-2 px-4 border">General Checkup</td>
                         <td class="py-2 px-4 border">
-                            <a href="editAppointment.jsp?id=1" class="bg-yellow-500 text-white px-3 py-1 rounded-lg hover:bg-yellow-600">Reschedule</a>
+                            <a href="editAppointment.jsp?id=1" class="bg-yellow-500 text-white px-3 py-1 rounded-lg hover:bg-yellow-600">Edit</a>
                             <a href="cancelAppointment.jsp?id=1" class="bg-red-500 text-white px-3 py-1 rounded-lg hover:bg-red-600">Cancel</a>
                         </td>
                     </tr>
