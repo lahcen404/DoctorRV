@@ -1,6 +1,6 @@
 package Patient.Model;
 
-public class Patient{
+public class patient{
 	
 	private int id;
 	private String username;
@@ -11,7 +11,7 @@ public class Patient{
 	
 	
 
-	public Patient(int id, String username, String email, String tele) {
+	public patient(int id, String username, String email, String tele) {
 		
 		this.id = id;
 		this.username = username;
@@ -19,7 +19,7 @@ public class Patient{
 		this.tele = tele;
 	}
 	
-public Patient( String username, String email, String tele) {
+public patient( String username, String email, String tele) {
 		
 		
 		this.username = username;
