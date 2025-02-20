@@ -67,7 +67,7 @@ public class patientDAO{
         return patients;
     }
     
-    // Delete stock
+    // Delete Patient
     public void deletePatient(int id) throws SQLException {
         try (Connection connection = getConnection();
              PreparedStatement stmnt = connection.prepareStatement(DELETE_PATIENT_SQL)) {

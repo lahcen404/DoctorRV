@@ -24,7 +24,7 @@
             <p class="text-gray-600">Please fill in the details below</p>
         </div>
 
-        <form action="#" method="POST" class="space-y-5">
+        <form action="<%= request.getContextPath() %>/insert" method="POST" class="space-y-5">
             <div>
                 <label class="block text-blue-800 font-semibold">Username</label>
                 <input type="text" name="username" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 bg-gray-100" required>
@@ -35,7 +35,7 @@
             </div>
             <div>
                 <label class="block text-blue-800 font-semibold">Telephone</label>
-                <input type="tel" name="telephone" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 bg-gray-100" required>
+                <input type="tel" name="tele" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 bg-gray-100" required>
             </div>
             
             <button type="submit" class="w-full bg-blue-700 text-white py-3 rounded-lg font-semibold hover:bg-blue-800 transition">Submit</button>
