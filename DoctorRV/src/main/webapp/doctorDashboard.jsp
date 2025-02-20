@@ -27,7 +27,6 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <%-- Sample Data (Replace with dynamic data from DB) --%>
                     <tr class="text-center border-b">
                         <td class="py-2 px-4 border">John Doe</td>
                         <td class="py-2 px-4 border">john@example.com</td>
@@ -38,7 +37,7 @@
                             <a href="cancelAppointment.jsp?id=1" class="bg-red-500 text-white px-3 py-1 rounded-lg hover:bg-red-600">Cancel</a>
                         </td>
                     </tr>
-                    <%-- More rows dynamically from DB --%>
+                    
                 </tbody>
             </table>
         </div>

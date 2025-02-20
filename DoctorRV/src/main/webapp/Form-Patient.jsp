@@ -37,11 +37,7 @@
                 <label class="block text-blue-800 font-semibold">Telephone</label>
                 <input type="tel" name="telephone" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 bg-gray-100" required>
             </div>
-            <div>
-                <label class="block text-blue-800 font-semibold">Motif</label>
-                <textarea name="motif" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 bg-gray-100" rows="3" required></textarea>
-            </div>
-
+            
             <button type="submit" class="w-full bg-blue-700 text-white py-3 rounded-lg font-semibold hover:bg-blue-800 transition">Submit</button>
             <a href="patientSpace.jsp" class="w-full text-center block border-2 border-blue-700 text-blue-700 py-3 rounded-lg font-semibold hover:bg-blue-700 hover:text-white transition">Back</a>
         </form>
