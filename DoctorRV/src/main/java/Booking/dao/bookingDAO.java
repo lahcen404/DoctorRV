@@ -36,17 +36,14 @@ public class bookingDAO{
         return connection;
     }
     
-    //insert a Patient
-    public void insertPatient(booking booking)throws SQLException{
+    //insert a Booking
+    public void insertBooking(booking booking)throws SQLException{
     	
     	try(Connection connection = getConnection() ;
     			PreparedStatement stmnt = connection.prepareStatement(INSERT_BOOKING_SQL)){
 			stmnt.setInt(1,booking.getPatientId());
 			stmnt.setInt(2,booking.getDoctorId());
-			
-			java.sql.Date sqlDate = new java.sql.Date(booking.getDate().getTime()); // convert to time
-
-			stmnt.setDate(3,sqlDate);
+			stmnt.setString(3,booking.getDate());
 			stmnt.setString(4,booking.getMotif());
 
 			stmnt.executeUpdate();
@@ -55,7 +52,7 @@ public class bookingDAO{
     
     
     // select all BOOKING
-    public List<booking> selectAllPatient() throws SQLException {
+    public List<booking> selectAllBooking() throws SQLException {
         List<booking> bookings = new ArrayList<>();
         try (Connection connection = getConnection();
              PreparedStatement stmnt = connection.prepareStatement(SELECT_ALL_BOOKING);
@@ -66,7 +63,7 @@ public class bookingDAO{
                    
                     rs.getInt("patientId"),
                     rs.getInt("getDoctorId"),
-                    rs.getDate("getDate"),
+                    rs.getString("getDate"),
                     rs.getString("getMotif")
                 ));
             }
@@ -83,5 +80,7 @@ public class bookingDAO{
             
         }
     }
+
+	
 }
     

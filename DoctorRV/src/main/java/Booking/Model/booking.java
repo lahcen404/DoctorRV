@@ -7,12 +7,12 @@ public class booking{
 	private int id;
     private int patientId;
     private int doctorId;
-    private Date date;
+    private String date;
     private String motif;
     
     
     
-	public booking(int id, int patientId, int doctorId, Date date, String motif) {
+	public booking(int id, int patientId, int doctorId, String date, String motif) {
 		
 		this.id = id;
 		this.patientId = patientId;
@@ -21,7 +21,7 @@ public class booking{
 		this.motif = motif;
 	}
 	
-	public booking( int patientId, int doctorId, Date date, String motif) {
+	public booking( int patientId, int doctorId, String date, String motif) {
 		
 		
 		this.patientId = patientId;
@@ -32,7 +32,7 @@ public class booking{
 	
 	
 	
-	public int getId() {
+	public  int getId() {
 		return id;
 	}
 	public void setId(int id) {
@@ -50,10 +50,10 @@ public class booking{
 	public void setDoctorId(int doctorId) {
 		this.doctorId = doctorId;
 	}
-	public Date getDate() {
+	public String getDate() {
 		return date;
 	}
-	public void setDate(Date date) {
+	public void setDate(String date) {
 		this.date = date;
 	}
 	public String getMotif() {
