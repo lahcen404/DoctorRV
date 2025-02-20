@@ -73,6 +73,7 @@ public class patientDAO{
              PreparedStatement stmnt = connection.prepareStatement(DELETE_PATIENT_SQL)) {
             stmnt.setInt(1, id);
             stmnt.executeUpdate();
+            
         }
     }
 }
