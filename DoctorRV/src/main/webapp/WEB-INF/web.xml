@@ -8,11 +8,31 @@
     <servlet>
         <servlet-name>patientServlet</servlet-name>
         <servlet-class>Patient.Controller.patientServlet</servlet-class>
-        
+    </servlet>
+
+    <servlet>
+        <servlet-name>bookingServlet</servlet-name>
+        <servlet-class>Booking.Controller.bookingServlet</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>doctorServlet</servlet-name>
+        <servlet-class>Doctor.Controller.doctorServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>
         <servlet-name>patientServlet</servlet-name>
         <url-pattern>/patientServlet</url-pattern>
     </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>bookingServlet</servlet-name>
+        <url-pattern>/bookingServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>doctorServlet</servlet-name>
+        <url-pattern>/doctorServlet</url-pattern>
+    </servlet-mapping>
+
 </web-app>

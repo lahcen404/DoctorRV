@@ -1,6 +1,5 @@
 package Booking.Model;
 
-import java.util.Date;
 
 public class booking{
 	
