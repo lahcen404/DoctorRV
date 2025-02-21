@@ -1,9 +1,14 @@
 package Patient.dao;
 
-import  Patient.Model.patient;
-import java.sql.*;
-import java.util.ArrayList;
-import java.util.List;
+import java.sql.Connection;  // For handling DB connections
+import java.sql.DriverManager;  // For MySQL JDBC
+import java.sql.PreparedStatement;  // For executing SQL queries
+import java.sql.ResultSet;  // For result set handling
+import java.sql.SQLException;  // For handling SQL exceptions
+import java.util.ArrayList;  // For handling collections
+import java.util.List;  // For collections
+import Patient.Model.patient;  // For the patient model
+
 
 
 
@@ -17,7 +22,7 @@ public class patientDAO{
     private static final String INSERT_PATIENT_SQL = "INSERT INTO Patient ( username,  email,  tele) VALUES ( ?, ?, ?)";
     private static final String SELECT_ALL_PATIENTS = " SELECT * FROM Patient ";
     private static final String SELECT_PATIENT_BY_ID = "SELECT * FROM Patient WHERE Patient_ID = ?";
-    private static final String DELETE_PATIENT_SQL = "DELETE FROM Patient WHERE ID = ?";
+    private static final String DELETE_PATIENT_SQL = "DELETE FROM Patient WHERE Patient_ID = ?";
 
     
     // Connection method

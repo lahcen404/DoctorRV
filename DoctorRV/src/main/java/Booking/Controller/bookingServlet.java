@@ -1,23 +1,21 @@
+
+
 package Booking.Controller;
 
 import Booking.dao.bookingDAO;
 import Booking.Model.booking;
 
-import javax.servlet.annotation.WebServlet;
-import javax.servlet.ServletException;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-
-
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
 import java.sql.SQLException;
 import java.util.List;
 
-import javax.servlet.RequestDispatcher;
-
-
+import jakarta.servlet.RequestDispatcher;
 
 
 
@@ -47,10 +45,10 @@ public class bookingServlet extends HttpServlet{
 	                	insertBooking(request, response);
 	                    break;
 	                case "/list":
-	                	listBooking(request, response);
+	                	//listBooking(request, response);
 	                    break;
 	                default:
-	                    listBooking(request, response);
+	                   // listBooking(request, response);
 	                    break;
 	            }
 	        } catch (SQLException ex) {

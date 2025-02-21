@@ -29,6 +29,8 @@
     <scope>provided</scope>
 </dependency>
 
+
+
 <!-- https://mvnrepository.com/artifact/javax.servlet.jsp/javax.servlet.jsp-api -->
 <dependency>
     <groupId>javax.servlet.jsp</groupId>
@@ -51,12 +53,7 @@
     <version>9.2.0</version>
 </dependency>
 
-<dependency>
-    <groupId>javax.servlet</groupId>
-    <artifactId>javax.servlet-api</artifactId>
-    <version>4.0.1</version> <!-- Use the correct version for your project -->
-    <scope>provided</scope>
-</dependency>
+
 
 
     <dependency>
@@ -74,6 +71,7 @@
       <version>4.13.1</version>
       <scope>test</scope>
     </dependency>
+    
   </dependencies>
 
   <build>
