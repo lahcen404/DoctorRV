@@ -22,7 +22,7 @@
             <h2 class="text-3xl font-bold text-blue-700">Book Appointment</h2>
             <p class="text-gray-600">Fill in the form below to schedule an appointment</p>
         </div>
-        <form action="bookAppointmentServlet" method="POST" class="space-y-5">
+        <form action="bookingServlet" method="POST" class="space-y-5">
             <div>
                 <label class="block text-blue-800 font-semibold">Username</label>
                 <input type="text" name="username" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 bg-gray-100" required>

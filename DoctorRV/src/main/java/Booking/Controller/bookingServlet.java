@@ -38,19 +38,15 @@ public class bookingServlet extends HttpServlet{
 	    
 	    protected void doGet(HttpServletRequest request, HttpServletResponse response)
 	            throws ServletException, IOException {
-	    	String action = request.getServletPath();
+	        String action = request.getServletPath();
 
 	        try {
 	            switch (action) {
-	               
-	                case "/insert":
-	                	insertBooking(request, response);
-	                    break;
 	                case "/list":
-	                	listBooking(request, response);
+	                    listAppointments(request, response);
 	                    break;
 	                default:
-	                    listBooking(request, response);
+	                    listAppointments(request, response);
 	                    break;
 	            }
 	        } catch (SQLException ex) {
@@ -73,15 +69,11 @@ public class bookingServlet extends HttpServlet{
 	    }
 	    
 	    
-	    private void listBooking(HttpServletRequest request, HttpServletResponse response)
+	    private void listAppointments(HttpServletRequest request, HttpServletResponse response)
 	            throws SQLException, IOException, ServletException {
-	        List<booking> listBooking = bookingDAO.selectAllBooking();
-	        
-	        // tester list 
-	        listBooking.forEach(booking -> System.out.println(booking.getId()));
-	        
-	        request.setAttribute("listPatient", listBooking);
-	        RequestDispatcher dispatcher = request.getRequestDispatcher("patientDashboard.jsp");
+	        List<booking> appointments = bookingDAO.selectAllAppointments();
+	        request.setAttribute("appointments", appointments);
+	        RequestDispatcher dispatcher = request.getRequestDispatcher("bookAppointments.jsp");
 	        dispatcher.forward(request, response);
 	    }
 	    

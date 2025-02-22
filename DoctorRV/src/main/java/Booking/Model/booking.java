@@ -8,6 +8,9 @@ public class booking{
     private int doctorId;
     private String date;
     private String motif;
+    private String patientName;
+    private String doctorName;
+
     
     
     
@@ -18,6 +21,7 @@ public class booking{
 		this.doctorId = doctorId;
 		this.date = date;
 		this.motif = motif;
+		
 	}
 	
 	public booking( int patientId, int doctorId, String date, String motif) {
@@ -62,6 +66,22 @@ public class booking{
 		this.motif = motif;
 	}
 	
+
+    public String getPatientName() {
+        return patientName;
+    }
+
+    public void setPatientName(String patientName) {
+        this.patientName = patientName;
+    }
+
+    public String getDoctorName() {
+        return doctorName;
+    }
+
+    public void setDoctorName(String doctorName) {
+        this.doctorName = doctorName;
+    }
     
     
 }

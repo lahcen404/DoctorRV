@@ -14,10 +14,10 @@ public class bookingDAO{
     private String jdbcUsername = "root";  
     private String jdbcPassword = "lahcen123"; 
 	
-    private static final String INSERT_BOOKING_SQL = "INSERT INTO Appoinment ( Appoinment_ID,  Appoinment_Date,  Motif , Patient_ID , Doctor_ID) VALUES ( ?, ?, ?, ?, ?)";
-    private static final String SELECT_ALL_BOOKING = " SELECT * FROM Appoinment ";
-    private static final String SELECT_BOOKING_BY_ID = "SELECT * FROM Appoinment WHERE Appoinment_ID = ?";
-    private static final String DELETE_BOOKING_SQL = "DELETE FROM Appoinment WHERE ID = ?";
+    private static final String INSERT_BOOKING_SQL = "INSERT INTO Appoitnment ( Appointment_ID,  Appointment_Date,  Motif , Patient_ID , Doctor_ID) VALUES ( ?, ?, ?, ?, ?)";
+    private static final String SELECT_ALL_BOOKING = " SELECT * FROM Appoitnment ";
+    private static final String SELECT_BOOKING_BY_ID = "SELECT * FROM Appoitnment WHERE Appointment_ID = ?";
+    private static final String DELETE_BOOKING_SQL = "DELETE FROM Appoitnment WHERE ID = ?";
 
     
     // Connection method
@@ -51,23 +51,32 @@ public class bookingDAO{
     
     
     // select all BOOKING
-    public List<booking> selectAllBooking() throws SQLException {
-        List<booking> bookings = new ArrayList<>();
+    public List<booking> selectAllAppointments() throws SQLException {
+        List<booking> appointments = new ArrayList<>();
+        String query = "SELECT a.Appointment_ID, a.Appointment_Date, a.Motif, " +
+                       "p.Username AS PatientName, d.Name AS DoctorName " +
+                       "FROM Appointment a " +
+                       "JOIN Patient p ON a.Patient_ID = p.Patient_ID " +
+                       "JOIN Doctor d ON a.Doctor_ID = d.Doctor_ID";
+
         try (Connection connection = getConnection();
-             PreparedStatement stmnt = connection.prepareStatement(SELECT_ALL_BOOKING);
-             ResultSet rs = stmnt.executeQuery()) {
-        	System.out.println( "connected on " + connection );
+             PreparedStatement stmt = connection.prepareStatement(query);
+             ResultSet rs = stmt.executeQuery()) {
+
             while (rs.next()) {
-                bookings.add(new booking(
-                   
-                    rs.getInt("patientId"),
-                    rs.getInt("getDoctorId"),
-                    rs.getString("getDate"),
-                    rs.getString("getMotif")
-                ));
+                booking booking = new booking(
+                    rs.getInt("Appointment_ID"),
+                    rs.getInt("Patient_ID"),
+                    rs.getInt("Doctor_ID"),
+                    rs.getString("Appointment_Date"),
+                    rs.getString("Motif")
+                );
+                booking.setPatientName(rs.getString("PatientName"));
+                booking.setDoctorName(rs.getString("DoctorName"));
+                appointments.add(booking);
             }
         }
-        return bookings;
+        return appointments;
     }
     
     // Delete Patient
