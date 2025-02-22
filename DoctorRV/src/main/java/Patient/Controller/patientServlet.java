@@ -21,7 +21,7 @@ import javax.servlet.RequestDispatcher;
 
 
 
-@WebServlet("/patient")
+@WebServlet({"/patient", "/insert", "/list", "/delete"})
 
 public class patientServlet extends HttpServlet{
 	    private static final long serialVersionUID = 1L;

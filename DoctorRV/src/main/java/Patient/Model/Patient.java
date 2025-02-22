@@ -53,4 +53,15 @@ public patient( String username, String email, String tele) {
 		this.tele = tele;
 	}
 	
+	
+	 @Override
+	    public String toString() {
+	        return "patient{" +
+	                "id=" + id +
+	                ", username='" + username + '\'' +
+	                ", email='" + email + '\'' +
+	                ", telephone='" + tele + '\'' +
+	                '}';
+	    }
+	
 }

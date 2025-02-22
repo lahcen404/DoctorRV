@@ -21,7 +21,7 @@ import javax.servlet.RequestDispatcher;
 
 
 
-@WebServlet("/")
+@WebServlet("/booking")
 
 public class bookingServlet extends HttpServlet{
 	    private static final long serialVersionUID = 1L;
@@ -47,10 +47,10 @@ public class bookingServlet extends HttpServlet{
 	                	insertBooking(request, response);
 	                    break;
 	                case "/list":
-	                	//listBooking(request, response);
+	                	listBooking(request, response);
 	                    break;
 	                default:
-	                   // listBooking(request, response);
+	                    listBooking(request, response);
 	                    break;
 	            }
 	        } catch (SQLException ex) {
